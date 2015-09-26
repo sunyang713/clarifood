@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+import predictor
 
 app = Flask(__name__)
 
@@ -6,5 +7,10 @@ app = Flask(__name__)
 def main():
     return render_template('index.html')
 
+@app.route("/predict/<path:url>")
+def predict(url):
+    return str(predictor.predict(url))
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0")
+    app.run(host="0.0.0.0", debug=True)
+    # app.run(debug=True) # for testing
