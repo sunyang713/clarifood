@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>ClariFood</title>
+    <title>clarifood</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
@@ -34,6 +34,16 @@
     <![endif]-->
   </head>
 
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
   <body>
 
     <div class="site-wrapper">
@@ -41,6 +51,8 @@
       <div class="site-wrapper-inner">
 
         <div class="cover-container">
+
+          {% block header %}
 
           <!--div class="masthead clearfix">
             <div class="inner">
@@ -62,6 +74,7 @@
             </div>
           </div-->
 
+          {% endblock %}
 
           {% block content %}
           <div class="inner cover">
@@ -75,9 +88,10 @@
 
 
 
-          <div class="mastfoot">
+          <!--div class="mastfoot"-->
+          <div class="footer">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.</p>
             </div>
           </div>
 

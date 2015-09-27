@@ -4,15 +4,22 @@
   <h1 class="cover-heading"><span class="title-clari">clari</span><span class="title-food">food</span></h1>
   <p class="lead"></p>
 
+
+
   <form class="form" action="/find" method='post'>
     <div class="form-group input-group-lg">
-      <input name="image_url" type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1">
+      <input name="image_url" type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
     </div>
     <button type="submit" class="btn btn-lg btn-default">Go!</button>
   </form>
+
+
   {% if error %}
-    <p class="lead error">Please enter a valid image url.</p>
+    <div class="error-msg alert alert-danger" role="alert">{{ error }}</div>
+  {% else %}
+    <div class="error-msg no-error alert alert-danger" role="alert">&nbsp;</div>
   {% endif %}
+
 
 </div>
 {% endblock %}
