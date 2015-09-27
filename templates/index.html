@@ -3,37 +3,29 @@
 {% block header %}
 {% endblock %}
 
-
-
 {% block content %}
 
-<div class="circles-loader">
-  Loading…
-</div>
-
 <div class="inner cover">
+
+  <div class="circles-loader">
+    Loading…
+  </div>
+
   <h1 class="cover-heading"><span class="title-clari">clari</span><span class="title-food">food</span></h1>
   <p class="lead"></p>
-
-
 
   <form class="form" action="/find" method='post'>
     <div class="form-group input-group-lg">
       <input name="image_url" type="text" class="form-control" placeholder="Paste image URL here" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
     </div>
-    <button type="submit" class="xx btn btn-lg btn-warning has-spinner gold-button" style="width:100px">
-      Go!
-      <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
-    </button>
+    <button type="submit" class="btn btn-lg btn-warning gold-button">Go!</button>
   </form>
-
 
   {% if error %}
     <div class="error-msg alert alert-danger" role="alert">{{ error }}</div>
   {% else %}
     <div class="error-msg no-error alert alert-danger" role="alert">&nbsp;</div>
   {% endif %}
-
 
 </div>
 {% endblock %}

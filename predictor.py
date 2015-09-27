@@ -3,12 +3,9 @@
 from clarifai_basic import ClarifaiCustomModel
 import json
 
-
 with open('demo_categories.json') as json_file:
 	data = json.load(json_file)
 
-
-# predict whether bubble tea or not
 def predict(url):
     concept = ClarifaiCustomModel()
     highscore = 0

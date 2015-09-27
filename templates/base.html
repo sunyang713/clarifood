@@ -26,8 +26,6 @@
     <!-- Spinner -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/circles.css') }}" type="text/css">
 
-
-
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -38,16 +36,6 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-
-  {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      <ul class=flashes>
-      {% for message in messages %}
-        <li>{{ message }}</li>
-      {% endfor %}
-      </ul>
-    {% endif %}
-  {% endwith %}
 
   <body>
 
@@ -97,8 +85,8 @@
           <!--div class="mastfoot"-->
           <div class="footer">
             <div class="inner">
-              <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.<br>
-                <a href="/about">Learn more</a></p>
+              <p>A 2015 HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.</p>
+              <p><a href="/about">Learn more</a></p>
             </div>
           </div>
 

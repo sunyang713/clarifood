@@ -16,7 +16,6 @@ def main():
 def about():
     return render_template('about.html', active='about')
 
-
 @app.route('/find', methods=['GET', 'POST'])
 def find():
     error = None
@@ -27,23 +26,20 @@ def find():
         else:
             return render_template('index.html', error='Please enter a valid image URL.')
 
-
 @app.route("/identify/<path:url>")
 def identify(url):
     result = predictor.predict(url)
+    # if True:
     if result:
         return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
         # return render_template('results.html', url=url, result='bubble tea', locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 
-
-
 @app.route("/unrecognized")
 def unrecognized():
     return 'Unrecognized :('
     # return render_template('unrecognized.html')
-
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)

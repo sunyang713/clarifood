@@ -46,48 +46,8 @@ span.title-food {
   max-width: 500px;
 }
 
-
 .unfix-position {
   position: relative;
-}
-
-.xx .spinner {
-  display: inline-block;
-  opacity: 0;
-  width: 0;
-
-  color: green;
-  background-color: black;
-
-  -webkit-transition: opacity 0.25s, width 0.25s;
-  -moz-transition: opacity 0.25s, width 0.25s;
-  -o-transition: opacity 0.25s, width 0.25s;
-  transition: opacity 0.25s, width 0.25s;
-}
-
-.xx .has-spinner.active {
-  cursor:progress;
-}
-
-.xx .has-spinner.active .spinner {
-  opacity: 1;
-  width: auto; /* This doesn't work, just fix for unkown width elements */
-}
-
-.xx .has-spinner.btn-mini.active .spinner {
-    width: 10px;
-}
-
-.xx .has-spinner.btn-small.active .spinner {
-    width: 13px;
-}
-
-.xx .has-spinner.btn.active .spinner {
-    width: 16px;
-}
-
-.xx .has-spinner.btn-large.active .spinner {
-    width: 19px;
 }
 
 .gold-button {

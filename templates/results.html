@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 
-
 {% block content %}
 <div class="inner cover results-content">
   <h1>you want {{ result.lower() }}!</h1>
   <p class="lead"></p>
 
-
   <div class="img-box">
     <img src="{{ url }}" class="img-responsive circle-img">
   </div>
+
   <ul class="unstyled-list locations">
     {% for location in locations %}
       <div class="location-card">
@@ -34,4 +33,3 @@
 
 </div>
 {% endblock %}
-
