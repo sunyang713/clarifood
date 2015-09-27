@@ -1,0 +1,19 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand';
+}
+p, div {
+  font-family: 'Quicksand';
+}
+
+span.title-clari {
+  color: white;
+}
+
+span.title-food {
+  font-weight: bold;
+  color: red;
+}
+
+.error {
+  color: red;
+}

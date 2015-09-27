@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="inner cover">
-  <h1 class="cover-heading">Clarif(y your f)ood</h1>
-  <p class="lead">text</p>
+  <h1 class="cover-heading"><span class="title-clari">clari</span><span class="title-food">food</span></h1>
+  <p class="lead"></p>
 
-  <form class="form" action="/post" method='post'>
+  <form class="form" action="/find" method='post'>
     <div class="form-group input-group-lg">
       <input name="image_url" type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1">
     </div>
     <button type="submit" class="btn btn-lg btn-default">Go!</button>
   </form>
+  {% if error %}
+    <p class="lead error">Please enter a valid image url.</p>
+  {% endif %}
 
 </div>
 {% endblock %}
