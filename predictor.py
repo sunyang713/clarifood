@@ -4,7 +4,7 @@ from clarifai_basic import ClarifaiCustomModel
 import json
 
 
-with open('small_categories.json') as json_file:
+with open('select_categories.json') as json_file:
 	data = json.load(json_file)
 
 
@@ -15,7 +15,7 @@ def predict(url):
 
     for datum in data:
     	score = concept.predict(url, datum['alias'])['urls'][0]['score']
-    	if score > .8:
+    	if score > .9:
     		return datum 
     	if score > highscore and score > 0.5:
     		category = datum
