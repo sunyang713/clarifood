@@ -8,6 +8,7 @@ httplib2==0.9
 itsdangerous==0.24
 oauth2==1.0
 python-google-places==1.0.1
+requests[security]
 six==1.9.0
 wsgiref==0.1.2
 gunicorn
