@@ -31,7 +31,7 @@ def find():
 @app.route("/identify/<path:url>")
 def identify(url):
     result = predictor.predict(url)
-    if (True):
+    if result:
         return render_template('results.html', result=result['title'], locations=locator.find(query=result['alias']))
         # return render_template('results.html', result='bubble tea', locations=HARD)
     else:
