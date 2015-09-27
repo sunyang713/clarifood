@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
+
+<div class="circles-loader">
+  Loading…
+</div>
+
 <div class="inner cover">
   <h1 class="cover-heading"><span class="title-clari">clari</span><span class="title-food">food</span></h1>
   <p class="lead"></p>
@@ -10,7 +15,10 @@
     <div class="form-group input-group-lg">
       <input name="image_url" type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
     </div>
-    <button type="submit" class="btn btn-lg btn-default">Go!</button>
+    <button type="submit" class="btn btn-lg btn-warning has-spinner gold-button" style="width:100px">
+      Go!
+      <span class="spinner"><i class="icon-spin icon-refresh"></i></span>
+    </button>
   </form>
 
 

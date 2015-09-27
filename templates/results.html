@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block header %}
 
-<div class="masthead clearfix">
+<div class="masthead clearfix unfix-position">
   <div class="inner">
     <h3 class="masthead-brand"><span class="title-clari">clari</span><span class="title-food">food</span></h3>
     <nav>
@@ -24,10 +24,10 @@
 {% endblock %}
 {% block content %}
 <div class="inner cover results-content">
-  <h1>Results</h1>
+  <h1>you want {{ result }}!</h1>
   <p class="lead"></p>
 
-  <ul class="unstyled-list">
+  <ul class="unstyled-list locations">
     {% for location in locations %}
       <div class="location-card">
         <li>
@@ -48,6 +48,14 @@
     <a href="/" class="btn btn-lg btn-default">Go again</a>
   </p>
 
+</div>
+{% endblock %}
+
+{% block footer %}
+<div class="footer">
+  <div class="inner">
+    <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.</p>
+  </div>
 </div>
 {% endblock %}
 

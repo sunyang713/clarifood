@@ -32,7 +32,11 @@ body {
   /*background-image: url('../images/background_01.JPG');*/
   background-size: cover;
   background-attachment: fixed;
+  background-position: fixed;
   background-color: #21437E;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 body {
   color: #fff;

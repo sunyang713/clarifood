@@ -27,17 +27,67 @@ span.title-food {
   list-style-type: none;
 }
 
+.locations {
+  text-align: center;
+}
+
 .location-card {
-  border: 2px solid black;
   text-align: left;
+  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-left: 10px;
-  background-color: #637BA4;
+  padding-left: 50px;
+  padding-right: 50px;
+  background: rgba(99,123,164,0.6);
+  border-radius: 25px;
+  min-height: 100px;
+  max-width: 400px;
 }
 
-.results-content {
-  margin-top: 100px;
+
+.unfix-position {
+  position: relative;
 }
+
+.spinner {
+  display: inline-block;
+  opacity: 0;
+  width: 0;
+
+  -webkit-transition: opacity 0.25s, width 0.25s;
+  -moz-transition: opacity 0.25s, width 0.25s;
+  -o-transition: opacity 0.25s, width 0.25s;
+  transition: opacity 0.25s, width 0.25s;
+}
+
+.has-spinner.active {
+  cursor:progress;
+}
+
+.has-spinner.active .spinner {
+  opacity: 1;
+  width: auto; /* This doesn't work, just fix for unkown width elements */
+}
+
+.has-spinner.btn-mini.active .spinner {
+    width: 10px;
+}
+
+.has-spinner.btn-small.active .spinner {
+    width: 13px;
+}
+
+.has-spinner.btn.active .spinner {
+    width: 16px;
+}
+
+.has-spinner.btn-large.active .spinner {
+    width: 19px;
+}
+
+.gold-button {
+  background: rgba(255, 204, 51, 0.9);
+}
+
