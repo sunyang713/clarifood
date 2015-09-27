@@ -30,8 +30,10 @@ def find():
 
 @app.route("/identify/<path:url>")
 def identify(url):
-    if (predictor.predict(url)):
-        return render_template('results.html', locations=locator.find(query="bubbletea"))
+    result = predictor.predict(url)
+    if (True):
+        return render_template('results.html', result=result['title'], locations=locator.find(query=result['alias']))
+        # return render_template('results.html', result='bubble tea', locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 

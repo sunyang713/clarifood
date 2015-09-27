@@ -23,6 +23,11 @@
     <!-- Google font -->
     <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
+    <!-- Spinner -->
+    <link rel="stylesheet" href="http://css-spinners.com/css/spinner/circles.css" type="text/css">
+
+
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -76,6 +81,7 @@
 
           {% endblock %}
 
+
           {% block content %}
           <div class="inner cover">
             <h1 class="cover-heading">Cover your page.</h1>
@@ -87,14 +93,15 @@
           {% endblock %}
 
 
-
-          <!--div class="mastfoot"-->
-          <div class="footer">
+          {% block footer %}
+          <div class="mastfoot">
+          <!--div class="footer"-->
             <div class="inner">
               <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.<br>
                 <a href="/about">Learn more</a></p>
             </div>
           </div>
+          {% endblock %}
 
         </div>
 
@@ -107,6 +114,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
