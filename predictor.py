@@ -4,7 +4,7 @@ from clarifai_basic import ClarifaiCustomModel
 import json
 
 
-with open('small_categories.json') as json_file:
+with open('select_categories.json') as json_file:
 	data = json.load(json_file)
 
 
