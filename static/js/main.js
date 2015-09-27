@@ -1,13 +1,20 @@
 $().ready(function(){
-    $('.btn').click(function(event) {
-		$(event.currentTarget).html('Processing...');
-	});
+  $('.btn').click(function(event) {
+    setInterval(function() {
+      p = "Processing"
+      setTimeout(function() {
+        $(event.currentTarget).html(p + '.');
+      }, 250);
+      setTimeout(function() {
+        $(event.currentTarget).html(p + '.');
+      }, 500);
+      setTimeout(function() {
+        $(event.currentTarget).html(p + '.');
+      }, 750);
+      setTimeout(function() {
+        $(event.currentTarget).html(p + '.');
+      }, 1000);
+    }, 1000);
+  });
+
 })
-// $(function(){
-
-//     // $('a, button').click(function() {
-//     //     $(this).toggleClass('active');
-//     // });
-
-
-// });
