@@ -39,7 +39,7 @@ for d in data:
 
 concept = ClarifaiCustomModel()
 
-train model for each category
+# train model for each category
 for cat in categories:
     print cat['alias']
     if cat['alias'] in DONE:
