@@ -43,11 +43,11 @@ span.title-food {
   background: rgba(99,123,164,0.6);
   border-radius: 25px;
   min-height: 100px;
-  max-width: 400px;
+  max-width: 500px;
 }
 
 
-.xx .unfix-position {
+.unfix-position {
   position: relative;
 }
 
@@ -94,3 +94,11 @@ span.title-food {
   background: rgba(255, 204, 51, 0.9);
 }
 
+.img-box {
+  width: 200px;
+  margin: 0 auto;
+}
+
+.circle-img {
+    border-radius: 100px;
+}

@@ -32,8 +32,8 @@ def find():
 def identify(url):
     result = predictor.predict(url)
     if result:
-        return render_template('results.html', result=result['title'], locations=locator.find(query=result['alias']))
-        # return render_template('results.html', result='bubble tea', locations=HARD)
+        return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
+        # return render_template('results.html', url=url, result='bubble tea', locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 

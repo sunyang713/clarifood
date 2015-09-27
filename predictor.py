@@ -17,7 +17,7 @@ def predict(url):
     	score = concept.predict(url, datum['alias'])['urls'][0]['score']
     	if score > .9:
     		return datum 
-    	if score > highscore and score > 0.5:
+    	if score > highscore and score > 0.6:
     		category = datum
     		highscore = score
     		print category['alias']

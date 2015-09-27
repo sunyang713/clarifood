@@ -60,25 +60,25 @@
 
           {% block header %}
 
-          <!--div class="masthead clearfix">
+          <div class="masthead clearfix unfix-position">
             <div class="inner">
               <h3 class="masthead-brand"><span class="title-clari">clari</span><span class="title-food">food</span></h3>
               <nav>
                 <ul class="nav masthead-nav">
                   {% if active == 'home' %}
-                    <li class="active"><a href="/">Home</a></li>
+                    <li class="active"><a href="/">home</a></li>
                   {% else %}
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">home</a></li>
                   {% endif %}
                   {% if active == 'about' %}
-                    <li class="active"><a href="/about">About</a></li>
+                    <li class="active"><a href="/about">about</a></li>
                   {% else %}
-                    <li><a href="/about">About</a></li>
+                    <li><a href="/about">about</a></li>
                   {% endif %}
                 </ul>
               </nav>
             </div>
-          </div-->
+          </div>
 
           {% endblock %}
 
@@ -95,13 +95,14 @@
 
 
           {% block footer %}
-          <div class="mastfoot">
-          <!--div class="footer"-->
+          <!--div class="mastfoot"-->
+          <div class="footer">
             <div class="inner">
               <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.<br>
                 <a href="/about">Learn more</a></p>
             </div>
           </div>
+
           {% endblock %}
 
         </div>

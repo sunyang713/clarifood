@@ -1,42 +1,26 @@
 {% extends "base.html" %}
-{% block header %}
 
-<div class="masthead clearfix unfix-position">
-  <div class="inner">
-    <h3 class="masthead-brand"><span class="title-clari">clari</span><span class="title-food">food</span></h3>
-    <nav>
-      <ul class="nav masthead-nav">
-        {% if active == 'home' %}
-          <li class="active"><a href="/">Home</a></li>
-        {% else %}
-          <li><a href="/">Home</a></li>
-        {% endif %}
-        {% if active == 'about' %}
-          <li class="active"><a href="/about">About</a></li>
-        {% else %}
-          <li><a href="/about">About</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-  </div>
-</div>
 
-{% endblock %}
 {% block content %}
 <div class="inner cover results-content">
-  <h1>you want {{ result }}!</h1>
+  <h1>you want {{ result.lower() }}!</h1>
   <p class="lead"></p>
 
+
+  <div class="img-box">
+    <img src="{{ url }}" class="img-responsive circle-img">
+  </div>
   <ul class="unstyled-list locations">
     {% for location in locations %}
       <div class="location-card">
         <li>
           <ul class="unstyled-list">
-            <li>Name: {{ location.name }}</li>
+            <li>Name: <strong>{{ location.name }}</strong></li>
             <li>Address: {{ location.address }}</li>
             {% if location.website %}
               <li>Website: <a href='{{ location.website }}'>{{ location.website }}</a></li>
             {% else %}
+              <li>Website: <a href='{{ location.website }}'> - </a></li>
             {% endif %}
           </ul>
         </li>
@@ -48,14 +32,6 @@
     <a href="/" class="btn btn-lg btn-default">Go again</a>
   </p>
 
-</div>
-{% endblock %}
-
-{% block footer %}
-<div class="footer">
-  <div class="inner">
-    <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.</p>
-  </div>
 </div>
 {% endblock %}
 

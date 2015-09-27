@@ -1,4 +1,10 @@
 {% extends "base.html" %}
+
+{% block header %}
+{% endblock %}
+
+
+
 {% block content %}
 
 <div class="circles-loader">
@@ -13,7 +19,7 @@
 
   <form class="form" action="/find" method='post'>
     <div class="form-group input-group-lg">
-      <input name="image_url" type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
+      <input name="image_url" type="text" class="form-control" placeholder="Paste image URL here" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
     </div>
     <button type="submit" class="xx btn btn-lg btn-warning has-spinner gold-button" style="width:100px">
       Go!
@@ -31,3 +37,14 @@
 
 </div>
 {% endblock %}
+
+{% block footer %}
+<div class="mastfoot">
+<!--div class="footer"-->
+  <div class="inner">
+    <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.<br>
+      <a href="/about">Learn more</a></p>
+  </div>
+</div>
+{% endblock %}
+

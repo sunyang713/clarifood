@@ -1,35 +1,13 @@
 {% extends "base.html" %}
-{% block header %}
 
-<div class="masthead clearfix">
-  <div class="inner">
-    <h3 class="masthead-brand"><span class="title-clari">clari</span><span class="title-food">food</span></h3>
-    <nav>
-      <ul class="nav masthead-nav">
-        {% if active == 'home' %}
-          <li class="active"><a href="/">Home</a></li>
-        {% else %}
-          <li><a href="/">Home</a></li>
-        {% endif %}
-        {% if active == 'about' %}
-          <li class="active"><a href="/about">About</a></li>
-        {% else %}
-          <li><a href="/about">About</a></li>
-        {% endif %}
-      </ul>
-    </nav>
-  </div>
-</div>
-
-{% endblock %}
 {% block content %}
 <div class="inner cover">
-  <h1 class="cover-heading">why clarifood?</h1>
+  <h1>why clarifood?</h1>
   <p class="lead">
-    Have you ever seen someone on the streets and really wanted to know what they were eating? Have you ever seen a picture on Instagram and thought "Wow, I really want to eat that"? Give the picture to clari<b>food</b>, and you can find restaurants near you that serve the food you want. clari<b>food</b> is a revolutionary food app that uses a ground-breaking visual recognition API from <a href="https://www.clarifai.com">Clarifai</a> and combines it with the Google Places API to bring you to all those delicious-looking foods.
+    Have you ever seen someone on the streets and really wanted to know what they were eating? Have you ever seen a picture on Instagram and thought "Wow, I really want to eat that"? Give the picture to clari<strong>food</strong>, and you can find restaurants near you that serve the food you want. clari<strong>food</strong> is a revolutionary food app that uses a ground-breaking visual recognition API from <a href="https://www.clarifai.com">Clarifai</a> and combines it with the Google Places API to bring you to all those delicious-looking foods.
   </p>
   <p class="lead">
-    Why do we need clari<b>food</b>? Well, if you look at the new generation and the direction we are heading in, the <s>Creative Cloud</s>--clari<b>food</b> is the future; it has all the tools. Don't me about antiquated tools. I want to tell you about the future.
+    Why do we need clari<strong>food</strong>? Well, if you look at the new generation and the direction we are heading in, the <s>Creative Cloud</s>--clari<strong>food</strong> is the future; it has all the tools. Don't me about antiquated tools. I want to tell you about the future.
   </p>
 </div>
 {% endblock %}
