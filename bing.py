@@ -16,7 +16,7 @@ def image_exists(url):
         r = requests.get(url)
         print r.headers.get('content-type')
         print r.status_code
-        return 'image' in r.headers.get('content-type') and r.status_code == 200
+        return r.status_code == 200 and 'image' in r.headers.get('content-type')
     except requests.exceptions.ConnectionError:
         return False
 
