@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block header %}
+
+<div class="masthead clearfix">
+  <div class="inner">
+    <h3 class="masthead-brand"><span class="title-clari">clari</span><span class="title-food">food</span></h3>
+    <nav>
+      <ul class="nav masthead-nav">
+        {% if active == 'home' %}
+          <li class="active"><a href="/">Home</a></li>
+        {% else %}
+          <li><a href="/">Home</a></li>
+        {% endif %}
+        {% if active == 'about' %}
+          <li class="active"><a href="/about">About</a></li>
+        {% else %}
+          <li><a href="/about">About</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
+
+{% endblock %}
+{% block content %}
+<div class="inner cover results-content">
+  <h1>Results</h1>
+  <p class="lead"></p>
+
+  <ul class="unstyled-list">
+    {% for location in locations %}
+      <div class="location-card">
+        <li>
+          <ul class="unstyled-list">
+            <li>Name: {{ location.name }}</li>
+            <li>Address: {{ location.address }}</li>
+            {% if location.website %}
+              <li>Website: <a href='{{ location.website }}'>{{ location.website }}</a></li>
+            {% else %}
+            {% endif %}
+          </ul>
+        </li>
+      </div>
+    {% endfor %}
+  </ul>
+
+  <p class="lead">
+    <a href="/" class="btn btn-lg btn-default">Go again</a>
+  </p>
+
+</div>
+{% endblock %}
+

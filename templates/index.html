@@ -1,10 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="inner cover">
-  <h1 class="cover-heading">Index.</h1>
+  <h1 class="cover-heading"><span class="title-clari">clari</span><span class="title-food">food</span></h1>
   <p class="lead"></p>
-  <p class="lead">
-    <a href="#" class="btn btn-lg btn-default">Learn more</a>
-  </p>
+
+
+
+  <form class="form" action="/find" method='post'>
+    <div class="form-group input-group-lg">
+      <input name="image_url" type="text" class="form-control" placeholder="URL" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
+    </div>
+    <button type="submit" class="btn btn-lg btn-default">Go!</button>
+  </form>
+
+
+  {% if error %}
+    <div class="error-msg alert alert-danger" role="alert">{{ error }}</div>
+  {% else %}
+    <div class="error-msg no-error alert alert-danger" role="alert">&nbsp;</div>
+  {% endif %}
+
+
 </div>
 {% endblock %}

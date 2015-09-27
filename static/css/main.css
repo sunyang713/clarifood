@@ -1,0 +1,43 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand';
+}
+p, div {
+  font-family: 'Quicksand';
+}
+
+span.title-clari {
+  color: white;
+}
+
+span.title-food {
+  font-weight: bold;
+  color: red;
+}
+
+.error-msg {
+  margin-top: 10px;
+}
+
+.no-error {
+  visibility: hidden;
+}
+
+.unstyled-list {
+  padding:0; margin:0;
+  list-style-type: none;
+}
+
+.location-card {
+  border: 2px solid black;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  background-color: #637BA4;
+}
+
+.results-content {
+  margin-top: 100px;
+}

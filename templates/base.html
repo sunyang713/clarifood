@@ -9,13 +9,19 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>ClariFood</title>
+    <title>clarifood</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="{{ url_for('static', filename='css/cover.css') }}" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+
+    <!-- Google font -->
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -28,6 +34,16 @@
     <![endif]-->
   </head>
 
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <ul class=flashes>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
   <body>
 
     <div class="site-wrapper">
@@ -36,9 +52,11 @@
 
         <div class="cover-container">
 
-          <div class="masthead clearfix">
+          {% block header %}
+
+          <!--div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Cover</h3>
+              <h3 class="masthead-brand"><span class="title-clari">clari</span><span class="title-food">food</span></h3>
               <nav>
                 <ul class="nav masthead-nav">
                   {% if active == 'home' %}
@@ -54,8 +72,9 @@
                 </ul>
               </nav>
             </div>
-          </div>
+          </div-->
 
+          {% endblock %}
 
           {% block content %}
           <div class="inner cover">
@@ -69,9 +88,10 @@
 
 
 
-          <div class="mastfoot">
+          <!--div class="mastfoot"-->
+          <div class="footer">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>A HackNY app by <a href="https://www.linkedin.com/in/jonathansun0">Jonathan</a> and <a href="http://stephaniehuang.me">Stephanie</a>.</p>
             </div>
           </div>
 
