@@ -10,3 +10,10 @@ A hackNY Fall 2015 app.
  
 https://clarifood.herokuapp.com/
 
+#### ToDo:
+ - Un-hardcode secret keys..
+ - Google Maps
+ - Handler pages
+ - Pages about script and stuff
+ - Optimizing clarifai
+ - mobile... hah.
