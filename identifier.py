@@ -12,9 +12,9 @@ def identify(url):
     for d in data:
     	score = concept.predict(url, d['alias'])['urls'][0]['score']
     	if score > .9:
-    		return datum 
+    		return d
     	if score > highscore and score > 0.5:
-    		category = datum
+    		category = d
     		highscore = score
     		print category['alias']
     		print score
