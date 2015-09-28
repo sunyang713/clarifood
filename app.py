@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import predictor
+import identifier
 import locator
 import re
 
@@ -28,11 +28,11 @@ def find():
 
 @app.route("/identify/<path:url>")
 def identify(url):
-    # result = predictor.predict(url)
-    if True:
-    # if result:
+    result = identifier.identify(url)
+    # if True:
+    if result:
         # return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
-        return render_template('results.html', url=url, result='bubbletea', locations=HARD)
+        return render_template('results.html', url=url, result=result['title'], locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 
@@ -43,5 +43,5 @@ def unrecognized():
 
 if __name__ == "__main__":
     # app.run(host="0.0.0.0", debug=True)
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
     # app.run()
