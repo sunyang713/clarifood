@@ -51,6 +51,7 @@ span.title-food {
 }
 
 .gold-button {
+  width: 100px;
   background: rgba(255, 204, 51, 0.9);
 }
 
