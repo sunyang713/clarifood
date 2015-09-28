@@ -16,6 +16,7 @@ https://clarifood.herokuapp.com/
 
 #### ToDo:
  - Un-hardcode secret keys..
+ - Fix CSS and javascript
  - Google Maps
  - Handler pages
  - Pages about script and stuff
