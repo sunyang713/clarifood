@@ -31,8 +31,8 @@ def identify(url):
     result = identifier.identify(url)
     # if True:
     if result:
-        # return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
-        return render_template('results.html', url=url, result=result['title'], locations=HARD)
+        return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
+        # return render_template('results.html', url=url, result=result['title'], locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 
