@@ -1,7 +1,7 @@
 $().ready(function(){
   $('.btn').click(function(event) {
     setInterval(function() {
-      p = "Processing"
+      var p = "Processing"
       setTimeout(function() {
         $(event.currentTarget).html(p + '.');
       }, 250);
@@ -18,3 +18,4 @@ $().ready(function(){
   });
 
 })
+

@@ -28,11 +28,11 @@ def find():
 
 @app.route("/identify/<path:url>")
 def identify(url):
-    # result = identifier.identify(url)
-    if True:
-    # if result:
+    result = identifier.identify(url)
+    # if True:
+    if result:
         # return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
-        return render_template('results.html', url=url, result='bubbletea', locations=HARD)
+        return render_template('results.html', url=url, result=result['title'], locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 
