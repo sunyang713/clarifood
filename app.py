@@ -31,8 +31,8 @@ def identify(url):
     result = predictor.predict(url)
     # if True:
     if result:
-        return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
-        # return render_template('results.html', url=url, result='bubble tea', locations=HARD)
+        # return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
+        return render_template('results.html', url=url, result=result['title'], locations=HARD)
     else:
         return redirect(url_for('unrecognized'))
 
@@ -42,5 +42,5 @@ def unrecognized():
     # return render_template('unrecognized.html')
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True)
-    # app.run()
+    # app.run(host="0.0.0.0", debug=True)
+    app.run()
