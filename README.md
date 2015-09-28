@@ -6,3 +6,7 @@ A hackNY Fall 2015 app.
 #### Team
  - Jonathan Sun
  - Stephanie Huang
+ - 
+ 
+https://clarifood.herokuapp.com/
+
