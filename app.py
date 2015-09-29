@@ -34,7 +34,8 @@ def identify(url):
         return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
         # return render_template('results.html', url=url, result=result['title'], locations=HARD)
     else:
-        return redirect(url_for('unrecognized'))
+        # return redirect(url_for('unrecognized'))
+        return 'Unrecognized :('
 
 @app.route("/unrecognized")
 def unrecognized():
