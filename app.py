@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import identifier
+import classifier 
 import locator
 import re
 
@@ -28,7 +28,7 @@ def find():
 
 @app.route("/identify/<path:url>")
 def identify(url):
-    result = identifier.identify(url)
+    result = classifier.classify(url)
     # if True:
     if result:
         return render_template('results.html', url=url, result=result['title'], locations=locator.find(query=result['alias']))
