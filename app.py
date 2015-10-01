@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import classifier 
 import locator
 import re
+import json
 
 VALID_URL_REGEX = '^https?://(?:[a-z0-9\-]+\.)+[a-z]{2,6}(?:/[^/#?]+)+\.(?:jpg|gif|png|JPG)$'
 HARD = [{'website': u'http://www.vivibubbletea.com/', 'place_id': u'ChIJj7EjVSZawokRK8iYc3EFGew', 'name': u'Vivi Bubble Tea', 'address': u'49 Bayard St, New York, NY 10013, United States'}, {'website': u'http://www.coco-tea.com/', 'place_id': u'ChIJV_XwyaBZwokRy21Op4TYKCE', 'name': u'CoCo Tea', 'address': u'38 Lexington Ave, New York, NY 10010, United States'}, {'website': None, 'place_id': u'ChIJT2OTGydawokRIWblLTBVHDk', 'name': u"Sun's Organic Tea Shop", 'address': u'79 Bayard St, New York, NY 10013, United States'}, {'website': u'http://www.saintsalpusa.com/', 'place_id': u'ChIJxaxn9ptZwokRm8fifHPhju8', 'name': u"Saint's Alp Teahouse", 'address': u'39 3rd Ave, New York, NY 10003, United States'}, {'website': None, 'place_id': u'ChIJNeUW4VFawokRgS_6WC1zjWY', 'name': u"Hanco's Bubble Tea & Vietnamese Sandwich", 'address': u'147 Montague St, Brooklyn, NY 11201, United States'}]

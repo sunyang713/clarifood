@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block extraheader %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/map.css') }}">
+{% endblock %}
+
 {% block content %}
 <div class="inner cover results-content">
   <h1>you want {{ result.lower() }}!</h1>
@@ -8,6 +12,8 @@
   <div class="img-box">
     <img src="{{ url }}" class="img-responsive circle-img">
   </div>
+
+  <div id="map"></div>
 
   <ul class="unstyled-list locations">
     {% for location in locations %}
@@ -35,4 +41,13 @@
 
 
 </div>
+{% endblock %}
+
+{% block extrajs %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/fontawesome-markers.min.js') }}"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+<script>
+var locations = {{locations|tojson|safe}};
+</script>
+<script src="{{ url_for('static', filename='js/map.js') }}"></script>
 {% endblock %}
