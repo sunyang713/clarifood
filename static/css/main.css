@@ -51,8 +51,12 @@ span.title-food {
 }
 
 .gold-button {
-  width: 100px;
+  width: 150px;
   background: rgba(255, 204, 51, 0.9);
+}
+
+.btn-wrap {
+  padding-top: 40px;
 }
 
 .img-box {
@@ -61,5 +65,9 @@ span.title-food {
 }
 
 .circle-img {
-    border-radius: 100px;
+  border-radius: 100px;
+}
+
+.results-btn {
+  padding-top: 100px;
 }

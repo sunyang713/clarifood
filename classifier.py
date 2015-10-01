@@ -3,7 +3,7 @@
 from clarifai_basic import ClarifaiCustomModel
 import json
 
-with open('demo_cat.json') as json_file:
+with open('tiny_categories.json') as json_file:
     data = json.load(json_file)
 
 def classify(url):
