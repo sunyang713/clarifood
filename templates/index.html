@@ -18,8 +18,15 @@
     <div class="form-group input-group-lg">
       <input name="image_url" type="text" class="form-control" placeholder="Paste image URL here" aria-describedby="sizing-addon1" value="{{ request.form.image_url }}">
     </div>
-    <button type="submit" class="btn btn-lg btn-warning gold-button">Go!</button>
+    <p>
+      <button class="btn btn-lg btn-warning has-spinner" style="width:150px">
+        <span class="spinner"><i class="fa fa-spin fa-spinner"></i></span>
+        Go!
+      </button>
+    </p>
   </form>
+
+
 
   {% if error %}
     <div class="error-msg alert alert-danger" role="alert">{{ error }}</div>

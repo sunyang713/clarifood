@@ -1,4 +1,4 @@
-# identifies category, cuisine, or name of food from image.
+# classifies an image with category, cuisine, or name of food.
 
 from clarifai_basic import ClarifaiCustomModel
 import json
@@ -17,7 +17,7 @@ def classify(url):
     	if score > highscore and score > 0.5:
     		classification = d
     		highscore = score
-    		print category['alias']
+    		print classification['alias']
     		print score
     return classification
 
