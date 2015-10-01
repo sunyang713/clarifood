@@ -50,13 +50,9 @@ span.title-food {
   position: relative;
 }
 
-.gold-button {
+.btn-gold {
   width: 150px;
   background: rgba(255, 204, 51, 0.9);
-}
-
-.btn-wrap {
-  padding-top: 40px;
 }
 
 .img-box {
@@ -67,12 +63,6 @@ span.title-food {
 .circle-img {
   border-radius: 100px;
 }
-
-.results-btn {
-  padding-top: 100px;
-}
-
-
 
 .spinner {
   display: inline-block;
@@ -109,11 +99,4 @@ span.title-food {
 .has-spinner.btn-large.active .spinner {
     width: 19px;
 }
-
-
-
-
-
-
-
 
